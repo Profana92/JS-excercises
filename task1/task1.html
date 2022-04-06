@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="task1main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="window.location.href='../index.html'">Click me go back</button>
+    <code><pre>
+        const bodyEl = document.querySelector("body");
+        let todayParagraph = document.createElement("p");
+        let timeParagraph = document.createElement("p");
+        document.body.appendChild(todayParagraph);
+        document.body.appendChild(timeParagraph);
+        function valuesUpdate() {
+          let date = new Date();
+          todayParagraph.innerHTML = `Today is: ${date.toLocaleDateString("en", {
+            weekday: "long",
+          })}`;
+          timeParagraph.innerHTML = `Current time is: ${date.getHours()} : ${
+            date.getMinutes() < 10 ? "0" : ""
+          }${date.getMinutes()} : ${
+            date.getSeconds() < 10 ? "0" : ""
+          }${date.getSeconds()}`;
+        }
+        setInterval(valuesUpdate, 100);</pre></code>
+    <span> OUTPUT:</span>
+</body>
+
+</html>
