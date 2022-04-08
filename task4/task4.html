@@ -12,7 +12,35 @@
     <button onclick="window.location.href='../index.html'">
       Click me go back
     </button>
-    <code><pre></pre></code>
+    <code>
+      <pre>
+      const a = parseInt(document.querySelector("#number_a").value);
+      const b = parseInt(document.querySelector("#number_b").value);
+      const c = parseInt(document.querySelector("#number_c").value);
+      const output = document.querySelector(".output");
+      function calculate() {
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        const equationPart = (a + b + c) / 2;
+        const area = Math.sqrt(
+          equationPart *
+            ((equationPart - a) * (equationPart - b) * (equationPart - c))
+        );
+        console.log(area);
+      
+        output.innerText = area;
+      }
+      </pre>
+    </code>
+    <label for="tentacles">A:</label>
+    <input type="number" id="number_a" name="number_a" min="1" />
+    <label for="number_b">B:</label>
+    <input type="number" id="number_b" name="number_b" min="1" />
+    <label for="number_c">C:</label>
+    <input type="number" id="number_c" name="number_c" min="1" />
+    <button onclick="calculate()">Calculate</button>
     <p>OUTPUT:</p>
+    <p class="output"></p>
   </body>
 </html>
