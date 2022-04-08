@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="task7main.js" defer></script>
+    <title>Task 7</title>
+  </head>
+
+  <body>
+    <button onclick="window.location.href='../index.html'">
+      Click me go back
+    </button>
+    <code>
+      <pre>
+        let output = document.querySelector(".output");
+        for (let i = 2014; i <= 2050; i++) {
+          let date = new Date(i, 0, 1);
+          if (date.getDay() === 0)
+            output.innerText = `${output.innerText} 1st January is being a Sunday ${i} 
+            `;
+        }
+        </pre
+      >
+    </code>
+    <p>OUTPUT:</p>
+    <p class="output"></p>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="task9main.js" defer></script>
+    <title>Task 9</title>
+  </head>
+
+  <body>
+    <button onclick="window.location.href='../index.html'">Go back</button>
+    <code>
+      <pre>
+        let currentYear = new Date();
+        const christmas = new Date(currentYear.getFullYear(), 11, 24);
+        let time = christmas.getTime() - currentYear.getTime();
+        time = Math.ceil(time / 24 / 60 / 60 / 1000);
+        console.log("Till christmas there are: " + time + " days left.");
+        const output = document.querySelector(".output");
+        output.textContent = `Till christmas there are: ${time} days left.`;
+        </pre
+      >
+    </code>
+    <p>OUTPUT:</p>
+    <p class="output"></p>
+  </body>
+</html>

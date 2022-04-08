@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="task10main.js" defer></script>
+    <title>Task 10</title>
+  </head>
+
+  <body>
+    <button onclick="window.location.href='../index.html'">Go back</button>
+    <code>
+      <pre>
+        const output = document.querySelector(".output");
+        const inputOne = document.querySelector("#number_one");
+        const inputTwo = document.querySelector("#number_two");
+        let numberOne = 0;
+        let numberTwo = 1;
+        inputOne.addEventListener("change", getValues);
+        inputTwo.addEventListener("change", getValues);
+        function getValues() {
+          numberOne = parseInt(inputOne.value);
+          console.log(numberOne);
+          numberTwo = parseInt(inputTwo.value);
+          console.log(numberTwo);
+        }
+        function multiplication() {
+          output.innerText = `${numberOne * numberTwo}`;
+        }
+        function division() {
+          output.innerText = `${numberOne / numberTwo}`;
+        }
+        </pre
+      >
+    </code>
+    <input type="number" name="number_one" id="number_one" />
+    <label for="number_one">First number</label>
+    <input type="number" name="number_two" id="number_two" />
+    <label for="number_two">Second number</label>
+    <button onclick="division()">division</button>
+    <button onclick="multiplication()">multiplication</button>
+    <p>OUTPUT:</p>
+    <p class="output"></p>
+  </body>
+</html>
